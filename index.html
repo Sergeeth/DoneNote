@@ -47,8 +47,10 @@
             <div class="global-padding-a first-screen-wrapper">
                 <div class="details">
                     <h1>
-                        Instant n<span>o</span>tes
-                        for your website
+                        Instant <br>
+                        n<span>o</span>tes <br>
+                        for your <br>
+                        website
                     </h1>
 
                     <p>
@@ -410,6 +412,7 @@
         $('#oratorVideoControl').click(function(){
             if( $("#oratorVideo").prop('muted') ) {
                 $("#oratorVideo").prop('muted', false);
+                $('#oratorVideo')[0].load();
                 $(this).toggleClass("active");
             } else {
             $("#oratorVideo").prop('muted', true);
