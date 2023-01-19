@@ -90,6 +90,10 @@
             <div class="global-padding-a first-screen-wrapper">
 
                 <div class="details">
+                    <div class="wrapper-element">
+                        <span class="element">
+                        </span>
+                    </div>
                     <h1>
                         Instant <span>n<span>o</span>tes</span> for <br>
                         your website
@@ -463,6 +467,16 @@
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('.element', {
+            strings: [ '', 'for Product Managers', 'for Designers', 'for Entrepreneurs', 'for Agencies' ],
+            typeSpeed: 40,
+            backSpeed: 40,
+            smartBackspace: true,
+            loop: true
+        });
+    </script>
     <script>
         $(window).on("scroll", function () {
             $("header").toggleClass("scroll", $(this).scrollTop() > $(window).height());
