@@ -30,14 +30,14 @@ section
         background: url("../../img/header-bg.jpg") !important
         background-size: 2000px 100% !important
         background-position: center !important
-
     &.bg-ffffff
         background: var(--color-FFFFFF) !important
 
 .container
-    max-width: 1184px
+    max-width: 1232px
     width: 100%
     margin: auto
+    padding: 0 24px
 
 .global-padding-a
     padding: 100px 0
@@ -673,13 +673,19 @@ header
         margin-bottom: 24px
 
 
-@media screen and (max-height: 832px)
-    .global-padding-a
-        padding: 64px 0
+@media screen and (max-width: 1232px)
+    .container
+        max-width: 1024px
+        width: 100%
 
-    .first-screen-wrapper
-        grid-template-columns: 1fr 1fr
-        > .details 
-            h1
-                font-size: 112px
-                line-height: 96px
+@media screen and (max-width: 1022px)
+    .container
+        max-width: 768px
+        width: 100%
+        padding: 0 24px
+        
+@media screen and (max-width: 766px)
+    .container
+
+        margin: auto
+        
