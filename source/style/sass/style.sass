@@ -59,7 +59,7 @@ header
     position: absolute
     top: 0
     left: 0
-    z-index: 999
+    z-index: 998
     transition: 0.3s ease
     &.scroll
         height: 72px
@@ -75,6 +75,25 @@ header
         transform: translateY(-96px)
     100%
         transform: translateY(0px)
+
+.fixed-s-hiw
+    position: fixed
+    display: flex
+    width: 280px
+    height: 160px
+    top: 0
+    right: 0
+    z-index: 999
+    opacity: 0
+    user-select: none
+    pointer-events: none
+    transition: 0.3s
+    &.active
+        opacity: 1
+    > img
+        width: 280px
+        height: 160px
+
         
 
 .header-wrapper

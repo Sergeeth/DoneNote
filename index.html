@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div class="fixed-s-hiw" id="hide-block">
+        <img src="source/img/fq1.png">
+    </div>
 
 
     <header>
@@ -498,6 +501,30 @@
         $('html, body').animate({
             scrollTop: scrollTop
         }, 500);
+    </script>
+    <script>
+        // Получаем элементы блоков
+        const hideBlock = $('#hide-block');
+        const triggerBlock = $('#HowItsWork');
+
+        // Функция, которая будет выполняться при скроллинге страницы
+        $(window).on('scroll', function() {
+        // Получаем текущее положение верхней и нижней границ экрана относительно верха страницы
+        const scrollPosition = $(this).scrollTop();
+        const windowTop = scrollPosition;
+        const windowBottom = windowTop + $(this).height();
+        const triggerBlockTop = triggerBlock.offset().top;
+        const triggerBlockBottom = triggerBlockTop + triggerBlock.outerHeight();
+        
+        // Если пользователь проскролил до блока triggerBlock
+        if (windowTop <= triggerBlockBottom && windowBottom >= triggerBlockTop) {
+            // Добавляем класс active к блоку hideBlock
+            hideBlock.addClass('active');
+        } else {
+            // Убираем класс active у блока hideBlock
+            hideBlock.removeClass('active');
+        }
+        });
     </script>
 
 </body>
